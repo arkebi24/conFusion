@@ -30,13 +30,17 @@
                     <li class="nav-items"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    
+                    <!--Task 1-->
+                    
+                    <a id="buttonLogin" role="button">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
     
     </nav>
+    
     
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -76,6 +80,7 @@
         </div>
     </div>
     
+    
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -86,9 +91,12 @@
                 <div class="col-12 col-sm align-self center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block btn-warning"
-                       data-toggle="modal" data-target="#reservationFormModal" role="button">Reserve Table</a>
+                <div class="col-12 col-sm align-self-center" style="text-align: center;">
+                    
+                    <!--Task 1-->
+                    
+                    <a id="buttonReservation" class="btn btn-block btn-warning"
+                      role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -105,28 +113,14 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group row">
-                                    <label for="firstname" class="col-md-2 col-form-label">Number of Guests</label>
+                                    <label class="col-md-2 col-form-label control-label">Number of Guests</label>
                                     <div class="col-md-10">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-secondary active">
-                                                <input type="radio" name="nbPeople" value="1" autocomplete="off" checked> 1
-                                            </label>
-                                            <label class="btn btn-secondary">
-                                                <input type="radio" name="nbPeople" value="2" autocomplete="off"> 2
-                                            </label>
-                                            <label class="btn btn-secondary">
-                                                <input type="radio" name="nbPeople" value="3" autocomplete="off"> 3
-                                            </label>
-                                            <label class="btn btn-secondary">
-                                                <input type="radio" name="nbPeople" value="4" autocomplete="off"> 4
-                                            </label>
-                                            <label class="btn btn-secondary">
-                                                <input type="radio" name="nbPeople" value="5" autocomplete="off"> 5
-                                            </label>
-                                            <label class="btn btn-secondary">
-                                                <input type="radio" name="nbPeople" value="6" autocomplete="off"> 6
-                                            </label>
-                                        </div>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option1" autocomplete="off"> &nbsp;1&nbsp;&nbsp;</label>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option2" autocomplete="off"> &nbsp;2&nbsp;&nbsp;</label>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option3" autocomplete="off"> &nbsp;3&nbsp;&nbsp;</label>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option4" autocomplete="off"> &nbsp;4&nbsp;&nbsp;</label>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option5" autocomplete="off"> &nbsp;5&nbsp;&nbsp;</label>
+                                        <label class="radio radio-inline"><input type="radio" name="optionsRadios" value="option6" autocomplete="off"> &nbsp;6&nbsp;&nbsp;</label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -143,23 +137,23 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="lastname" class="col-md-2 col-form-label">Date and Time</label>
+                                    <label class="col-md-2 col-form-label">Date and Time</label>
                                     <div class="col-md-4">
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                            <!--<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>-->
                                             <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                            <!--<<span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>>-->
                                             <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="offset-md-2 col-md-10">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                         <button type="submit" class="btn btn-primary">Reserve</button>
                                     </div>
                                 </div>
@@ -167,7 +161,8 @@
                         </div>
                     </div>
                 </div>
-    </div>
+            </div>
+    
 
     <div class="container">
         <div class="row row-content">
@@ -302,13 +297,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    -->
     <script>
         $(document).ready(function() {
             $("#mycarousel").carousel({interval: 2000});
@@ -325,15 +313,25 @@
                 }
             });
             
+            //Task 2
+            
             $("#buttonLogin").click(function () {
                 $("#loginModal").modal('show');
             });
 
+            //Task 3
+            
             $("#buttonReservation").click(function () {
                 $("#reservationFormModal").modal('show');
             });
         });
     </script>
+    <!--<script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    -->
     
 </body>
 
